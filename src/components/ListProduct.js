@@ -8,6 +8,7 @@ import { ProducData }  from "../Data/ProducData"
 const ListProducCards = () => {
     
    const {agregarCarrito} = useContext(CartContext)
+   
 
   return (
     <div className='productos-Container'>

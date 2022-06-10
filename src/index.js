@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import { Provider } from 'react-redux';
 import { store } from './redux/store/store';
-import Registro from './components/Registro';
+import AppRouters from './routers/AppRouters';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Registro />
+    <AppRouters />
   </Provider>,
   document.getElementById('root')
 );
