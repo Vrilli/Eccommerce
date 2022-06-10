@@ -1,8 +1,8 @@
 import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from "../Context/CartContext"
-import { ProducData }  from "../Data/ProducData"
-
+import { ProducData }  from "../Data/data"
+import "../styles/ListProductCards.css"
 
 
 const ListProducCards = () => {
