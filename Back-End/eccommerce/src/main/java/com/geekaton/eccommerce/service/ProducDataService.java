@@ -30,7 +30,10 @@ private ProducDataMap producDataMap;
 @Override
 public List<ProducDataDTO> findAllProducDatas() {
     // TODO Auto-generated method stub
+    //System.out.println("service");
+    //System.out.println(producDataMap.mappAllProducDatasToProducDatasDTOs(producDataRepository.findProducDatas()));
     return producDataMap.mappAllProducDatasToProducDatasDTOs(producDataRepository.findProducDatas());
+    //return producDataRepository.findProducDatas();
 }
 
 public Optional<ProducDataDTO> findProducDataById(Long id){

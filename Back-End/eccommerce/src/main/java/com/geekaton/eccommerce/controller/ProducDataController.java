@@ -27,7 +27,7 @@ import com.geekaton.eccommerce.model.ProducData;
  */
 @RestController
 @CrossOrigin(origins= {"*"})
-@RequestMapping("api/ProducData")
+@RequestMapping("api/productdata")
 public class ProducDataController {
     
     	@Autowired
@@ -38,6 +38,8 @@ public class ProducDataController {
 	
 	@GetMapping
 	public List<ProducDataDTO> findAllProducDatas(){
+            System.out.println("controller");
+            //System.out.println(producDataService.findAllProducDatas());
 		return producDataService.findAllProducDatas();
 	}
 	

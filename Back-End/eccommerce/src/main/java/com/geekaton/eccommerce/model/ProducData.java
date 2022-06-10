@@ -4,6 +4,7 @@
  */
 package com.geekaton.eccommerce.model;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,14 +18,14 @@ import lombok.Data;
  * @author stevenfranco
  */
 @Entity
-@Table(name="ProducData")
+@Table(name="producdata")
 @Data
-public class ProducData {
+public class ProducData implements Serializable {
     
     	@Id
 	@Column(name="id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
+	private Long id;  
 	@Column(name="precio")
 	private Long precio;
 	@Column(name="amount")
@@ -33,5 +34,40 @@ public class ProducData {
 	private String nombre;
 	@Column(name="imagen")
 	private String imagen;
+
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getPrecio() {
+		return precio;
+	}
+	public void setPrecio(Long precio) {
+		this.precio = precio;
+	}
+
+	public Long getAmount() {
+		return amount;
+	}
+	public void setAmount(Long amount) {
+		this.amount = amount;
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public String getImagen() {
+		return imagen;
+	}
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
     
 }

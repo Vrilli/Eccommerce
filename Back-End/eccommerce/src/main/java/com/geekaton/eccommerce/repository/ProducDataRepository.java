@@ -9,11 +9,13 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.geekaton.eccommerce.model.ProducData;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author stevenfranco
  */
+@Repository
 public class ProducDataRepository {
     
     @Autowired
@@ -21,6 +23,7 @@ private IProducDataRepository producDataRepository;
 
 public List<ProducData> findProducDatas(){
     System.out.println("Aca");
+    //System.out.println(producDataRepository.findAll());
     return producDataRepository.findAll();
 }
 

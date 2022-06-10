@@ -16,7 +16,7 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface ProducDataMap {
     
-    public List<ProducDataDTO> mappAllProducDatasToProducDatasDTOs(List<ProducData> ProducDataes);
+    public List<ProducDataDTO> mappAllProducDatasToProducDatasDTOs(List<ProducData> ProducDatas);
 
     public ProducDataDTO mapProducDataToDTO(ProducData producData);
     
