@@ -3,7 +3,7 @@ import '../styles/Registro.css'
 import google from '../assets/logoGoogle.png'
 import { useForm } from '../hooks/useForm'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { loginEmailyPassAsync, loginGoogleAsync } from '../redux/actions/userAction'
 
 const IniciarSesion = () => {

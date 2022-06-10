@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../Context/CartContext";
 import { ItemCart } from "./ItemsCart";
-
+import "../styles/Carrito.css"
 
 const Carrito = () => {
   const [cartOpen, setCartOpen] = useState(false);
