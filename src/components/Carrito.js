@@ -3,7 +3,6 @@ import { CartContext } from "../Context/CartContext";
 import { ItemCart } from "./ItemsCart";
 import "../styles/Carrito.css"
 
-
 const Carrito = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const [productsLength, setProductsLength] = useState(0);

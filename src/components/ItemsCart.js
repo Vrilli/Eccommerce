@@ -3,7 +3,6 @@ import { CartContext } from "../Context/CartContext";
 import "../styles/Item.css"
 
 
-
 export const ItemCart = ({ item }) => {
   /* Traemos del context las funciones para agregar y sacar productos del carrito */
   const { deleteItemsCart, agregarCarrito } = useContext(CartContext);

@@ -1,14 +1,13 @@
 import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from "../Context/CartContext"
-import { ProducData }  from "../Data/data"
+import { ProducData }  from "../Data/ProducData"
 import "../styles/ListProductCards.css"
 
 
 const ListProducCards = () => {
     
    const {agregarCarrito} = useContext(CartContext)
-   
 
   return (
     <div className='productos-Container'>
@@ -28,3 +27,6 @@ const ListProducCards = () => {
 }
 
 export default ListProducCards;
+
+
+

@@ -4,8 +4,8 @@ import PrivateRouter from './PrivateRouter'
 import PublicRouter from './PublicRouter'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { Dashboard } from './Dashboard'
-import Registro from '../components/Registro'
-import IniciarSesion from '../components/IniciarSesion'
+import Registro from '../components2/Registro'
+import IniciarSesion from '../components2/IniciarSesion'
 
 
 const AppRouters = () => {
