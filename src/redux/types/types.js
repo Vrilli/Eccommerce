@@ -1,9 +1,5 @@
-import React from 'react'
-
-const types = () => {
-  return (
-    <div>types</div>
-  )
+export const types = {
+  login: '[User] Login',
+  logout: '[User] Logout',
+  register: '[User] Register',
 }
-
-export default types
