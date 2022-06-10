@@ -3,6 +3,7 @@ import '../styles/Registro.css'
 import { useDispatch } from 'react-redux'
 import { useForm } from '../hooks/useForm'
 import { registerAsync } from '../redux/actions/userAction'
+import { Link } from 'react-router-dom'
 
 const Registro = () => {
 
@@ -68,7 +69,7 @@ const Registro = () => {
           <button className='btn'>Continuar</button>
           <p className='condiciones'>Al crear una cuenta, aceptas las <span className='span'> Condiciones de Uso </span> y el<span className='span'> Aviso de Privacidad</span> de ecommerce.com.</p>
           <div>
-            <p>¿Ya tienes una cuenta? <span className='span'>Iniciar sesión</span></p>
+            <Link to="/"><button className='btnCrearCuenta'>Iniciar Sesión</button></Link>
           </div>
         </form>
       </div>
