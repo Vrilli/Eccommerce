@@ -1,4 +1,27 @@
-@Autowired
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.geekaton.eccommerce.service;
+
+import com.geekaton.eccommerce.DTO.ProducDataDTO;
+import com.geekaton.eccommerce.mapper.ProducDataMap;
+import com.geekaton.eccommerce.repository.ProducDataRepository;
+import com.geekaton.eccommerce.service.iProducDataService.IProducDataService;
+import java.util.List;
+import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.geekaton.eccommerce.model.ProducData;
+
+/**
+ *
+ * @author stevenfranco
+ */
+@Service
+public class ProducDataService implements IProducDataService{
+    
+    @Autowired
 private ProducDataRepository producDataRepository;
 @Autowired
 private ProducDataMap producDataMap;
@@ -21,12 +44,20 @@ public ProducDataDTO updateProducData(ProducDataDTO producDataDTO, Long id){
     Optional<ProducData> oProducData = producDataRepository.findProducDataById(id);
     if (oProducData.isPresent()) {
         
+        if (producDataDTO.getPrecio()!= null) {
+            oProducData.get().setPrecio(producDataDTO.getPrecio());
+        }
+        
+        if (producDataDTO.getAmount()!= null) {
+            oProducData.get().setAmount(producDataDTO.getAmount());
+        }
+                
         if (producDataDTO.getNombre() != null) {
             oProducData.get().setNombre(producDataDTO.getNombre());
         }
         
-        if (producDataDTO.getIdPais() != null) {
-            oProducData.get().setIdPais(producDataDTO.getIdPais());
+        if (producDataDTO.getImagen()!= null) {
+            oProducData.get().setImagen(producDataDTO.getImagen());
         }
         
 
@@ -51,4 +82,7 @@ public ProducData saveProducData(ProducData producData) {
     // TODO Auto-generated method stub
     producDataRepository.saveProducData(producData);
     return producData;
+}
+
+    
 }
