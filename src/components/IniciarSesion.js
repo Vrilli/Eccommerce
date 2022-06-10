@@ -3,8 +3,9 @@ import '../styles/Registro.css'
 import google from '../assets/logoGoogle.png'
 import { useForm } from '../hooks/useForm'
 import { useDispatch } from 'react-redux'
-// import { Link } from 'react-router-dom'
+
 import { loginEmailyPassAsync, loginGoogleAsync } from '../redux/actions/userAction'
+import { Link } from 'react-router-dom'
 
 const IniciarSesion = () => {
 
@@ -74,10 +75,10 @@ const IniciarSesion = () => {
           </div>
         </form>
       </div>
-      {/* <div className='constSecund flex'>
+      <div className='constSecund flex'>
         <p>¿Eres Nuevo en Ecommerce?</p>
-        <Link to="/registro"><button className='btnCrearCuenta'>Crea tu cuenta de Ecommerce</button></Link>
-      </div> */}
+        {/* <Link to="/Register"><button className='btnCrearCuenta'>Crea tu cuenta de Ecommerce</button></Link> */}
+      </div>
     </div>
   )
 }
