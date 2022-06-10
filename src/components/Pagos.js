@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { loadStripe } from "@stripe/stripe-js";
 import "bootswatch/dist/lux/bootstrap.min.css";
 import { Elements, CardElement, useStripe, useElements} from "@stripe/react-stripe-js";
 
 import axios from "axios";
+import { CartContext } from '../Context/CartContext';
 
 const stripePromise = loadStripe("pk_test_51L9AlzLrOmTtKtHD2DtVCVc9dLpEGdMGtWNeL9BeLMAgSMqhOLsNUnlGQvv1GzGPO8kEQM802K8eyMet4FrE4Pmt00AibQssCY");
 
@@ -44,14 +45,18 @@ const CheckoutForm = () => {
   };
 
   console.log(!stripe || loading);
+
+  // const { cartItems } = useContext(CartContext);
+
+  // const total = cartItems.reduce(
+  //   (previous, current) => previous + current.amount * current.precio,
+  //   0
+  // );
+
   return (
     <form className="card card-body" onSubmit={handleSubmit}>
       {/* Product Information */}
-      <img
-        src="https://www.corsair.com/medias/sys_master/images/images/h80/hdd/9029904465950/-CH-9109011-ES-Gallery-K70-RGB-MK2-01.png"
-        alt="Corsair Gaming Keyboard RGB"
-        className="img-fluid"
-      />
+      
 
       <h3 className="text-center my-2">Price: 100$</h3>
 

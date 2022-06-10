@@ -2,6 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../Context/CartContext";
 import { ItemCart } from "./ItemsCart";
 import "../styles/Carrito.css"
+import { Link } from "react-router-dom";
 
 const Carrito = () => {
   const [cartOpen, setCartOpen] = useState(false);
@@ -77,6 +78,7 @@ const Carrito = () => {
           )}
 
           <h2 className="total">Total: ${total}</h2>
+          <Link className='total pago' to="/pagos"><p className='text'>Pagar</p></Link>
         </div>
       )}
     </div>
